@@ -100,7 +100,7 @@ You need get install those programs:
 
 Using your comand line or terminal type:
 ``` bash 
-git clone https://github.com/Dangelo-JAN/criptocoins-rails-app.git
+git clone https://github.com/Dangelo-JAN/rails-blog-app.git
 ```
 
 ### Installation
