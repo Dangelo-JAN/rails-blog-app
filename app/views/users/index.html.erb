@@ -1,1 +1,21 @@
 <h1>This is the users/index view</h1>
+
+<img class="user-photo" src="user-image.png" alt="">
+
+<ul>
+  <% @users.each do |user| %>
+    <%= link_to user_path(user.id) do%>
+      <li>
+      <div class="user-card">
+        <div class="photo-container">
+          <img src="<%= user.photo%>" alt="User photo">
+        </div>
+        <div class="user-info">
+          <h2 class="user-name"><%= user.name %></h2>
+          <p class="posts-counter">Number of posts: <%= user.posts_counter %></p>
+        </div>
+      </div>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
