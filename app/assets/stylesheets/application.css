@@ -100,3 +100,16 @@ h2,
 .comments-container {
   margin-left: 2rem;
 }
+
+.post-show {
+  margin-left: 2rem;
+}
+
+.comments {
+  margin-left: 0.5rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
