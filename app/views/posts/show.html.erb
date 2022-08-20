@@ -1,1 +1,19 @@
 <h1>This is the posts/show view</h1>
+   <div class="comments-container">
+        <% @post.last_5_comments.each do |comment| %>
+        <% end %>
+      </div>
+
+      <div class="post-container">
+        <h2 class="post-title">Post <%= @post.title %></h2>
+        <p class="post"><%= @post.text %></p>
+        <div class="comments-likes">
+          <p class="counters">Comments <%= @post.comments_counter %>, Likes <%= @post.likes_counter %></p>
+        </div> 
+      </div>
+
+
+        <% @post.last_5_comments.each do |comment| %>
+                <p class="post"><%= @post.text %></p>
+        <% end %>
+      </div>
