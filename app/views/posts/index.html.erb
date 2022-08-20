@@ -1,1 +1,33 @@
 <h1>This is the posts/index view</h1>
+
+<div class="user-card">
+  <div class="photo-container">
+    <img src="<%= @user.photo%>" alt="User photo">
+  </div>
+  <div class="user-info">
+    <h2 class="user-name"><%= @user.name %></h2>
+    <p class="posts-counter">Number of posts: <%= @user.posts_counter %></p>
+  </div>
+</div>
+
+<% @user.last_3_posts.each do |post| %>
+  <%= link_to user_post_path(@user.id, post.id), {:class => "link-class"} do%>
+    <ul>
+      <div class="post-container post-index">
+        <h2 class="post-title">Post <%= post.title %></h2>
+        <p class="post"><%= post.text %></p>
+        <div class="comments-likes">
+          <p class="counters">Comments <%= post.comments_counter %>, Likes <%= post.likes_counter %></p>
+        </div> 
+      </div>
+    </ul>
+    <div class="comments-container">
+      <% post.last_5_comments.each do |comment| %>
+        <div>
+          <span><%= comment.author.name %>: </span>
+          <span><%= comment.text %></span>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+<% end %>
