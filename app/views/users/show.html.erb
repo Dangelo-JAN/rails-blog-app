@@ -34,3 +34,9 @@
     <%= link_to "See all posts", user_posts_path(@user), {:class => "pointer-class"} %>
   </button>
 </div>
+
+<div class="button-container">
+  <button class="button new-post">
+    <%= link_to "New post", new_user_post_path(@user), {:class => "link-class"} %>
+  </button>
+</div>

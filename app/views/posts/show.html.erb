@@ -18,3 +18,9 @@
     </div>
   <% end %>
 </div>
+
+<div class="button-container">
+  <button class="button new-post">
+    <%= link_to "New Comment", new_user_post_comment_path(@user.id, @post.id), {:class => "link-class"} %>
+  </button>
+</div>

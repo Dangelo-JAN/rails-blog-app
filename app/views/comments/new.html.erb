@@ -1,0 +1,10 @@
+<div class="form-container">
+  <h1>Create New Comment</h1>
+  <%= form_with model: [@user, @post, @comment] do |f| %>
+    <h3>Text:</h3>
+    <%= f.text_area :text, placeholder: "Write your text...", required: true, class: "text-area" %>
+    <div class="submit-button">
+      <%= f.submit "Submit", class: "button submit" %>
+    </div>
+  <% end %>
+</div>
