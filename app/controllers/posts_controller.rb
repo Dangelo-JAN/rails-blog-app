@@ -24,6 +24,5 @@ class PostsController < ApplicationController
       @user = User.find(params[:user_id])
       render :new, status: :unprocessable_entity
     end
-
   end
 end
