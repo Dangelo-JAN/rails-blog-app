@@ -18,3 +18,13 @@
     </div>
   <% end %>
 </div>
+
+<%= form_with url: "/users/#{@user.id}/posts/#{@post.id}/likes", class: 'comments_counter' do |like| %>
+  <%= like.submit "Like Post", class: "button like_button"%>
+<% end %>
+
+<div class="button-container">
+  <button class="button new-post">
+    <%= link_to "New Comment", new_user_post_comment_path(@user.id, @post.id), {:class => "link-class"} %>
+  </button>
+</div>
