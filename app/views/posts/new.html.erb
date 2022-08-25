@@ -1,3 +1,8 @@
+<div>
+  <%= link_to "Edit account", edit_user_registration_path %>
+  <%= link_to "Logout", destroy_user_session_path %>  
+</div>
+
 <div class="form-container">
   <h1>Create New Post</h1>
   <%= form_with model: [@user, @post] do |f| %>

@@ -1,5 +1,10 @@
 <h1>This is the posts/show view</h1>
 
+<div>
+  <%= link_to "Edit account", edit_user_registration_path %>
+  <%= link_to "Logout", destroy_user_session_path %>  
+</div>
+
 <div class="post-container post-show">
   <div class="container">
     <h2 class="post-title">Post <%= @post.title %> by: <%= @user.name %></h2>

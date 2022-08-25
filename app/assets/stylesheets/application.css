@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .user-card,
 .user-info {
   display: flex;
@@ -116,4 +121,36 @@ h2,
 
 .button-container {
   text-align: center;
+}
+
+.login-container {
+  width: 100vw;
+}
+
+.field {
+  width: 80vw;
+  margin: 0.5rem auto;
+}
+
+#user_email,
+#user_password,
+#user_name,
+#user_password_confirmation {
+  width: 80vw;
+  border-radius: 0;
+  border-bottom: 2px solid #000;
+  border-left: 2px solid #000;
+}
+
+.actions {
+  text-align: center;
+}
+
+.login-button,
+.signin-button {
+  margin-top: 1rem;
+  width: 80.5vw;
+  border-radius: 0;
+  border-bottom: 5px solid #000;
+  border-left: 5px solid #000;
 }
