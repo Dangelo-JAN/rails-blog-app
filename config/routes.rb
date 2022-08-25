@@ -15,9 +15,10 @@ Rails.application.routes.draw do
   end
 
   # redirect to users_index_path toguether with Application_controller's method: after_sign_in_path_for
-  get '/users' => "users#index", :as => :users_root
+  # get '/users' => "users#index", :as => :users_root
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   # root "articles#index"
+end
