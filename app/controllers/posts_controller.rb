@@ -25,4 +25,10 @@ class PostsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
+  def destroy
+    @user = User.find(params[:user_id])
+    @post = @user.posts.find(params[:id]).destroy
+    redirec_to posts_path
+  end
 end
